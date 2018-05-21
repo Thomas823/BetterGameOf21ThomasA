@@ -1,0 +1,10 @@
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.frmBetterGameOf21.resources
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.Properties.Resources.resources
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.csproj.GenerateResource.cache
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.exe.config
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.exe
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.pdb
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.exe
+C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.pdb
