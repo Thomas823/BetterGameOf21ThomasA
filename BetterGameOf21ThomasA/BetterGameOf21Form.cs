@@ -31,8 +31,8 @@ namespace BetterGameOf21ThomasA
         List<string> cCards = new List<string>();
 
         // Create list to hold image of cards for player and computer
-        List<string> cCardDisplayed = new List<string>();
-        List<string> pCardDisplayed = new List<string>();
+        List<Image> cCardDisplayed = new List<Image>() { Properties.Resources.red_back, Properties.Resources.red_back, Properties.Resources.red_back };
+        List<Image> pCardDisplayed = new List<Image>();
 
         // Player score
         int pScore = 0;
@@ -107,10 +107,29 @@ namespace BetterGameOf21ThomasA
                 gameCards.RemoveAt(ranNumber);
 
                 // Find card score of new cards and add to cScore
-                cScore += CardCounter(cCards[3]);
+                cScore += CardCounter(cCards[2]);
+
+                // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list
+                cCardDisplayed[2] = CardDisplayed(cCards[2]);
+
+                // Set image to be displayed
+                picCom3.Image = cCardDisplayed[2];
+
+                // Show third card for computer
+                picCom3.Show();
             }
 
+            // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list
+            cCardDisplayed[0] = CardDisplayed(cCards[0]);
+            cCardDisplayed[1] = CardDisplayed(cCards[1]);
 
+            // Set image to be displayed
+            picCom1.Image = cCardDisplayed[0];
+            picCom2.Image = cCardDisplayed[1];
+
+            // Show first and second card for computer
+            picCom1.Show();
+            picCom2.Show();
         }
 
         // Function to calculate value of cards
@@ -294,170 +313,170 @@ namespace BetterGameOf21ThomasA
         // Function to calculate value of cards
         private Image CardDisplayed(string cardInput)
         {
-            // Declare cardValue and set to -1000 (Error - Score will be very off)
-            Image cardValue;
+            // Declare cardImage to store image of card to return
+            Image cardImage = Properties.Resources.gray_back;
 
-            // Switch statement to determine value of card
+            // Switch statement to determine image of card
             switch (cardInput)
             {
                 // Cycle through all posibilities. If .. set value...
                 case "SA":
-                    // Ace of spades has a value of 1
-                    cardValue = 1;
+                    // Ace of spades to picture of ace of spades (AS)
+                    cardImage = Properties.Resources.AS;
                     // End switch statement
                     break;
                 case "S2":
-                    cardValue = 2;
+                    cardImage = Properties.Resources._2S;
                     break;
                 case "S3":
-                    cardValue = 3;
+                    cardImage = Properties.Resources._3S;
                     break;
                 case "S4":
-                    cardValue = 4;
+                    cardImage = Properties.Resources._4S;
                     break;
                 case "S5":
-                    cardValue = 5;
+                    cardImage = Properties.Resources._5S;
                     break;
                 case "S6":
-                    cardValue = 6;
+                    cardImage = Properties.Resources._6S;
                     break;
                 case "S7":
-                    cardValue = 7;
+                    cardImage = Properties.Resources._7S;
                     break;
                 case "S8":
-                    cardValue = 8;
+                    cardImage = Properties.Resources._8S;
                     break;
                 case "S9":
-                    cardValue = 9;
+                    cardImage = Properties.Resources._9S;
                     break;
                 case "S10":
-                    cardValue = 10;
+                    cardImage = Properties.Resources._10S;
                     break;
                 case "SJ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.JS;
                     break;
                 case "SQ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.QS;
                     break;
                 case "SK":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.KS;
                     break;
                 case "HA":
-                    cardValue = 1;
+                    cardImage = Properties.Resources.AH;
                     break;
                 case "H2":
-                    cardValue = 2;
+                    cardImage = Properties.Resources._2H;
                     break;
                 case "H3":
-                    cardValue = 3;
+                    cardImage = Properties.Resources._3H;
                     break;
                 case "H4":
-                    cardValue = 4;
+                    cardImage = Properties.Resources._4H;
                     break;
                 case "H5":
-                    cardValue = 5;
+                    cardImage = Properties.Resources._5H;
                     break;
                 case "H6":
-                    cardValue = 6;
+                    cardImage = Properties.Resources._6H;
                     break;
                 case "H7":
-                    cardValue = 7;
+                    cardImage = Properties.Resources._7H;
                     break;
                 case "H8":
-                    cardValue = 8;
+                    cardImage = Properties.Resources._8H;
                     break;
                 case "H9":
-                    cardValue = 9;
+                    cardImage = Properties.Resources._9H;
                     break;
                 case "H10":
-                    cardValue = 10;
+                    cardImage = Properties.Resources._10H;
                     break;
                 case "HJ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.JH;
                     break;
                 case "HQ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.QH;
                     break;
                 case "HK":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.KH;
                     break;
                 case "DA":
-                    cardValue = 1;
+                    cardImage = Properties.Resources.AD;
                     break;
                 case "D2":
-                    cardValue = 2;
+                    cardImage = Properties.Resources._2D;
                     break;
                 case "D3":
-                    cardValue = 3;
+                    cardImage = Properties.Resources._3D;
                     break;
                 case "D4":
-                    cardValue = 4;
+                    cardImage = Properties.Resources._4D;
                     break;
                 case "D5":
-                    cardValue = 5;
+                    cardImage = Properties.Resources._5D;
                     break;
                 case "D6":
-                    cardValue = 6;
+                    cardImage = Properties.Resources._6D;
                     break;
                 case "D7":
-                    cardValue = 7;
+                    cardImage = Properties.Resources._7D;
                     break;
                 case "D8":
-                    cardValue = 8;
+                    cardImage = Properties.Resources._8D;
                     break;
                 case "D9":
-                    cardValue = 9;
+                    cardImage = Properties.Resources._9D;
                     break;
                 case "D10":
-                    cardValue = 10;
+                    cardImage = Properties.Resources._10D;
                     break;
                 case "DJ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.JD;
                     break;
                 case "DQ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.QD;
                     break;
                 case "DK":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.KD;
                     break;
                 case "CA":
-                    cardValue = 1;
+                    cardImage = Properties.Resources.AC;
                     break;
                 case "C2":
-                    cardValue = 2;
+                    cardImage = Properties.Resources._2C;
                     break;
                 case "C3":
-                    cardValue = 3;
+                    cardImage = Properties.Resources._3C;
                     break;
                 case "C4":
-                    cardValue = 4;
+                    cardImage = Properties.Resources._4C;
                     break;
                 case "C5":
-                    cardValue = 5;
+                    cardImage = Properties.Resources._5C;
                     break;
                 case "C6":
-                    cardValue = 6;
+                    cardImage = Properties.Resources._6C;
                     break;
                 case "C7":
-                    cardValue = 7;
+                    cardImage = Properties.Resources._7C;
                     break;
                 case "C8":
-                    cardValue = 8;
+                    cardImage = Properties.Resources._8C;
                     break;
                 case "C9":
-                    cardValue = 9;
+                    cardImage = Properties.Resources._9C;
                     break;
                 case "C10":
-                    cardValue = 10;
+                    cardImage = Properties.Resources._10C;
                     break;
                 case "CJ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.JC;
                     break;
                 case "CQ":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.QC;
                     break;
                 case "CK":
-                    cardValue = 10;
+                    cardImage = Properties.Resources.KC;
                     break;
                 // If none happen
                 default:
@@ -466,7 +485,7 @@ namespace BetterGameOf21ThomasA
             }
 
             // Return value of card
-            return cardValue;
+            return cardImage;
         }
     }
 }

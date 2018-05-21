@@ -33,8 +33,20 @@
             this.mnuMainMenu = new System.Windows.Forms.MenuStrip();
             this.mniGame = new System.Windows.Forms.ToolStripMenuItem();
             this.mniExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.picCom1 = new System.Windows.Forms.PictureBox();
+            this.picCom2 = new System.Windows.Forms.PictureBox();
+            this.picCom3 = new System.Windows.Forms.PictureBox();
+            this.picPly1 = new System.Windows.Forms.PictureBox();
+            this.picPly2 = new System.Windows.Forms.PictureBox();
+            this.picPly3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.mnuMainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly3)).BeginInit();
             this.SuspendLayout();
             // 
             // picBackground
@@ -80,15 +92,81 @@
             // mniExit
             // 
             this.mniExit.Name = "mniExit";
-            this.mniExit.Size = new System.Drawing.Size(180, 22);
+            this.mniExit.Size = new System.Drawing.Size(92, 22);
             this.mniExit.Text = "Exit";
             this.mniExit.Click += new System.EventHandler(this.mniExit_Click);
+            // 
+            // picCom1
+            // 
+            this.picCom1.Location = new System.Drawing.Point(324, 94);
+            this.picCom1.Name = "picCom1";
+            this.picCom1.Size = new System.Drawing.Size(107, 164);
+            this.picCom1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCom1.TabIndex = 3;
+            this.picCom1.TabStop = false;
+            this.picCom1.Visible = false;
+            // 
+            // picCom2
+            // 
+            this.picCom2.Location = new System.Drawing.Point(509, 94);
+            this.picCom2.Name = "picCom2";
+            this.picCom2.Size = new System.Drawing.Size(107, 164);
+            this.picCom2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCom2.TabIndex = 4;
+            this.picCom2.TabStop = false;
+            this.picCom2.Visible = false;
+            // 
+            // picCom3
+            // 
+            this.picCom3.Location = new System.Drawing.Point(693, 94);
+            this.picCom3.Name = "picCom3";
+            this.picCom3.Size = new System.Drawing.Size(107, 164);
+            this.picCom3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCom3.TabIndex = 5;
+            this.picCom3.TabStop = false;
+            this.picCom3.Visible = false;
+            // 
+            // picPly1
+            // 
+            this.picPly1.Location = new System.Drawing.Point(324, 358);
+            this.picPly1.Name = "picPly1";
+            this.picPly1.Size = new System.Drawing.Size(107, 164);
+            this.picPly1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPly1.TabIndex = 6;
+            this.picPly1.TabStop = false;
+            this.picPly1.Visible = false;
+            // 
+            // picPly2
+            // 
+            this.picPly2.Location = new System.Drawing.Point(509, 358);
+            this.picPly2.Name = "picPly2";
+            this.picPly2.Size = new System.Drawing.Size(107, 164);
+            this.picPly2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPly2.TabIndex = 7;
+            this.picPly2.TabStop = false;
+            this.picPly2.Visible = false;
+            // 
+            // picPly3
+            // 
+            this.picPly3.Location = new System.Drawing.Point(693, 358);
+            this.picPly3.Name = "picPly3";
+            this.picPly3.Size = new System.Drawing.Size(107, 164);
+            this.picPly3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPly3.TabIndex = 8;
+            this.picPly3.TabStop = false;
+            this.picPly3.Visible = false;
             // 
             // frmBetterGameOf21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 643);
+            this.Controls.Add(this.picPly3);
+            this.Controls.Add(this.picPly2);
+            this.Controls.Add(this.picPly1);
+            this.Controls.Add(this.picCom3);
+            this.Controls.Add(this.picCom2);
+            this.Controls.Add(this.picCom1);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.picBackground);
             this.Controls.Add(this.mnuMainMenu);
@@ -98,6 +176,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.mnuMainMenu.ResumeLayout(false);
             this.mnuMainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCom3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPly3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +194,12 @@
         private System.Windows.Forms.MenuStrip mnuMainMenu;
         private System.Windows.Forms.ToolStripMenuItem mniGame;
         private System.Windows.Forms.ToolStripMenuItem mniExit;
+        private System.Windows.Forms.PictureBox picCom1;
+        private System.Windows.Forms.PictureBox picCom2;
+        private System.Windows.Forms.PictureBox picCom3;
+        private System.Windows.Forms.PictureBox picPly1;
+        private System.Windows.Forms.PictureBox picPly2;
+        private System.Windows.Forms.PictureBox picPly3;
     }
 }
 
