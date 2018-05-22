@@ -3,7 +3,7 @@
  * Created on: 21 May, 2018
  * Created for: ICS3U Programming
  * Assignment #6b - A Better Game Of 21
- * This program plays blackjack with the player (computer operator), verses the computer
+ * This program plays blackjack with the player (computer operator), versus the computer
 */
 
 using System;
@@ -15,6 +15,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+// Add Sound Library
+using System.Media;
 
 namespace BetterGameOf21ThomasA
 {
@@ -55,6 +57,11 @@ namespace BetterGameOf21ThomasA
 
         // Create variable to hold random number
         int ranNumber;
+
+        // Load Sounds
+        SoundPlayer cheering = new SoundPlayer(Properties.Resources.Cheering);
+        SoundPlayer whaWha = new SoundPlayer(Properties.Resources.Wha_Wha);
+        SoundPlayer ooh = new SoundPlayer(Properties.Resources.Ooh);
 
 
 
@@ -605,7 +612,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "You Both Busted! The Computer Wins!";
 
                 // Play OMG lose sound
-                //ooh.Play();
+                ooh.Play();
 
                 // Increase win count to who won
                 //computerWinCount++;
@@ -616,7 +623,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Player Busted! The Computer Wins!";
 
                 //Play lose sound
-                //whaWha.Play();
+                whaWha.Play();
 
                 // Increase win count to who won
                 //computerWinCount++;
@@ -627,7 +634,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Computer Busted! The Player Wins!";
 
                 // Play win sound
-                //cheering.Play();
+                cheering.Play();
 
                 // Increase win count to who won
                 //playerWinCount++;
@@ -638,7 +645,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "It's a Tie! No One Wins!";
 
                 // Play OMG lose sound
-                //ooh.Play();
+                ooh.Play();
             }
             else if (pScore == 21)
             {
@@ -646,7 +653,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Player Got BlackJack! The Player Wins!";
 
                 // Play win sound
-                //cheering.Play();
+                cheering.Play();
 
                 // Increase win count to who won
                 //playerWinCount++;
@@ -657,7 +664,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Computer Got BlackJack! The Computer Wins!";
 
                 // Play lose sound
-                //whaWha.Play();
+                whaWha.Play();
 
                 // Increase win count to who won
                 //computerWinCount++;
@@ -668,7 +675,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Player Got A Higher Number. The Player Wins!";
 
                 // Play win sound
-                //cheering.Play();
+                cheering.Play();
 
                 // Increase win count to who won
                 //playerWinCount++;
@@ -679,7 +686,7 @@ namespace BetterGameOf21ThomasA
                 lblResults.Text = "The Computer Got A Higher Number. The Computer Wins!";
 
                 // Play lose sound
-                //whaWha.Play();
+                whaWha.Play();
 
                 // Increase win count to who won
                 //computerWinCount++;

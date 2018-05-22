@@ -481,6 +481,15 @@ namespace BetterGameOf21ThomasA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Cheering {
+            get {
+                return ResourceManager.GetStream("Cheering", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap GameBackground {
@@ -581,6 +590,15 @@ namespace BetterGameOf21ThomasA.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ooh {
+            get {
+                return ResourceManager.GetStream("Ooh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap QC {
@@ -627,6 +645,15 @@ namespace BetterGameOf21ThomasA.Properties {
             get {
                 object obj = ResourceManager.GetObject("red_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Wha_Wha {
+            get {
+                return ResourceManager.GetStream("Wha_Wha", resourceCulture);
             }
         }
     }
