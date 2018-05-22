@@ -39,6 +39,8 @@
             this.picPly1 = new System.Windows.Forms.PictureBox();
             this.picPly2 = new System.Windows.Forms.PictureBox();
             this.picPly3 = new System.Windows.Forms.PictureBox();
+            this.lblHitPrompt = new System.Windows.Forms.Label();
+            this.btnStay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.mnuMainMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCom1)).BeginInit();
@@ -155,12 +157,37 @@
             this.picPly3.TabIndex = 8;
             this.picPly3.TabStop = false;
             this.picPly3.Visible = false;
+            this.picPly3.Click += new System.EventHandler(this.picPly3_Click);
+            // 
+            // lblHitPrompt
+            // 
+            this.lblHitPrompt.AutoSize = true;
+            this.lblHitPrompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHitPrompt.Location = new System.Drawing.Point(716, 537);
+            this.lblHitPrompt.Name = "lblHitPrompt";
+            this.lblHitPrompt.Size = new System.Drawing.Size(245, 24);
+            this.lblHitPrompt.TabIndex = 9;
+            this.lblHitPrompt.Text = "Hit blue card for a third card!";
+            this.lblHitPrompt.Visible = false;
+            // 
+            // btnStay
+            // 
+            this.btnStay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStay.Location = new System.Drawing.Point(926, 428);
+            this.btnStay.Name = "btnStay";
+            this.btnStay.Size = new System.Drawing.Size(85, 32);
+            this.btnStay.TabIndex = 10;
+            this.btnStay.Text = "Stay";
+            this.btnStay.UseVisualStyleBackColor = true;
+            this.btnStay.Visible = false;
             // 
             // frmBetterGameOf21
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1281, 643);
+            this.Controls.Add(this.btnStay);
+            this.Controls.Add(this.lblHitPrompt);
             this.Controls.Add(this.picPly3);
             this.Controls.Add(this.picPly2);
             this.Controls.Add(this.picPly1);
@@ -200,6 +227,8 @@
         private System.Windows.Forms.PictureBox picPly1;
         private System.Windows.Forms.PictureBox picPly2;
         private System.Windows.Forms.PictureBox picPly3;
+        private System.Windows.Forms.Label lblHitPrompt;
+        private System.Windows.Forms.Button btnStay;
     }
 }
 

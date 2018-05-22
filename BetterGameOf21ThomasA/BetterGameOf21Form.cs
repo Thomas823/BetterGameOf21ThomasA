@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * Created by: Thomas Aubin
+ * Created on: 21 May, 2018
+ * Created for: ICS3U Programming
+ * Assignment #6b - A Better Game Of 21
+ * This program plays blackjack with the player (computer operator), verses the computer
+*/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,12 +40,15 @@ namespace BetterGameOf21ThomasA
 
         // Create list to hold image of cards for player and computer
         List<Image> cCardDisplayed = new List<Image>() { Properties.Resources.red_back, Properties.Resources.red_back, Properties.Resources.red_back };
-        List<Image> pCardDisplayed = new List<Image>();
+        List<Image> pCardDisplayed = new List<Image>() { Properties.Resources.blue_back, Properties.Resources.blue_back, Properties.Resources.blue_back };
 
         // Player score
         int pScore = 0;
         // Computer score
         int cScore = 0;
+
+        // if a third card has been created already for player
+        bool alreadyGenerated = false;
 
         // Create random number generator with min number
         Random randomNumberGenerator = new Random();
@@ -109,7 +120,7 @@ namespace BetterGameOf21ThomasA
                 // Find card score of new cards and add to cScore
                 cScore += CardCounter(cCards[2]);
 
-                // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list
+                // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list for computer
                 cCardDisplayed[2] = CardDisplayed(cCards[2]);
 
                 // Set image to be displayed
@@ -119,17 +130,51 @@ namespace BetterGameOf21ThomasA
                 picCom3.Show();
             }
 
-            // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list
+            // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list for computer
             cCardDisplayed[0] = CardDisplayed(cCards[0]);
             cCardDisplayed[1] = CardDisplayed(cCards[1]);
 
-            // Set image to be displayed
+            // Set image to be displayed for computer
             picCom1.Image = cCardDisplayed[0];
             picCom2.Image = cCardDisplayed[1];
 
             // Show first and second card for computer
             picCom1.Show();
             picCom2.Show();
+
+
+            // Generate first card for player (0 to all cards in gameCards), save index(random number), and then add card chosen from gameCards to pCards
+            pCards.Add(gameCards[ranNumber = randomNumberGenerator.Next(MIN_VALUE, gameCards.Count() - 1)]);
+            // Remove card from gameCards
+            gameCards.RemoveAt(ranNumber);
+
+            // Generate second card for player (0 to all cards in gameCards), save index(random number), and then add card chosen from gameCards to pCards
+            pCards.Add(gameCards[ranNumber = randomNumberGenerator.Next(MIN_VALUE, gameCards.Count() - 1)]);
+            // Remove card from gameCards
+            gameCards.RemoveAt(ranNumber);
+
+            // Find card score of new cards and add to pScore
+            pScore += CardCounter(pCards[0]);
+            pScore += CardCounter(pCards[1]);
+
+            // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list for player
+            pCardDisplayed[0] = CardDisplayed(pCards[0]);
+            pCardDisplayed[1] = CardDisplayed(pCards[1]);
+
+            // Set image to be displayed for computer
+            picPly1.Image = pCardDisplayed[0];
+            picPly2.Image = pCardDisplayed[1];
+            picPly3.Image = pCardDisplayed[2];
+
+            // Show first, second, and third card for player
+            picPly1.Show();
+            picPly2.Show();
+            picPly3.Show();
+
+            // Show hit prompt
+            lblHitPrompt.Show();
+            // Show stay button
+            btnStay.Show();
         }
 
         // Function to calculate value of cards
@@ -486,6 +531,30 @@ namespace BetterGameOf21ThomasA
 
             // Return value of card
             return cardImage;
+        }
+
+        // Procedure to hit for another card (player)
+        private void picPly3_Click(object sender, EventArgs e)
+        {
+            if (alreadyGenerated == false)
+            {
+                // Generate third card for player (0 to all cards in gameCards), save index(random number), and then add card chosen from gameCards to pCards
+                pCards.Add(gameCards[ranNumber = randomNumberGenerator.Next(MIN_VALUE, gameCards.Count() - 1)]);
+                // Remove card from gameCards
+                gameCards.RemoveAt(ranNumber);
+
+                // Find card score of new cards and add to pScore
+                pScore += CardCounter(pCards[2]);
+
+                // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list for player
+                pCardDisplayed[2] = CardDisplayed(pCards[2]);
+
+                // Set image to be displayed
+                picPly3.Image = pCardDisplayed[2];
+
+                // Make sure another card is not generated
+                alreadyGenerated = true;
+            }
         }
     }
 }
