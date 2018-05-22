@@ -8,3 +8,12 @@ C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGame
 C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.pdb
 C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.exe
 C:\Users\Thomas\Desktop\Programming\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.exe.config
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\bin\Debug\BetterGameOf21ThomasA.pdb
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.csprojResolveAssemblyReference.cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.frmBetterGameOf21.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.Properties.Resources.resources
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.csproj.GenerateResource.Cache
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.exe
+N:\StuShare\Semester 2 - Winter 2018\ICS3U Programming\Aubin, Thomas (s405546)\Assignments\BetterGameOf21ThomasA\BetterGameOf21ThomasA\obj\Debug\BetterGameOf21ThomasA.pdb
