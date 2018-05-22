@@ -61,13 +61,19 @@ namespace BetterGameOf21ThomasA
         public frmBetterGameOf21()
         {
             InitializeComponent();
+
+            // Hide score text, winner text, and new game button
+            lblComTotal.Hide();
+            lblPlyTotal.Hide();
+            lblResults.Hide();
+            btnNewGame.Hide();
         }
 
         // Procedure for start button at beginning
         private void btnStart_Click(object sender, EventArgs e)
         {
             // Hide start button
-            btnStart.Hide();
+            btnResults.Hide();
 
             // Change background to play the game
             picBackground.Image = Properties.Resources.GameBackground;
@@ -129,6 +135,11 @@ namespace BetterGameOf21ThomasA
                 // Show third card for computer
                 picCom3.Show();
             }
+            else
+            {
+                // Hide third card if not needed
+                picCom3.Hide();
+            }
 
             // Get images of card by calling CardDisplayed function, sending string of card, returning image and storing in list for computer
             cCardDisplayed[0] = CardDisplayed(cCards[0]);
@@ -164,7 +175,7 @@ namespace BetterGameOf21ThomasA
             // Set image to be displayed for computer
             picPly1.Image = pCardDisplayed[0];
             picPly2.Image = pCardDisplayed[1];
-            picPly3.Image = pCardDisplayed[2];
+            picPly3.Image = Properties.Resources.blue_back;
 
             // Show first, second, and third card for player
             picPly1.Show();
@@ -555,6 +566,179 @@ namespace BetterGameOf21ThomasA
                 // Make sure another card is not generated
                 alreadyGenerated = true;
             }
+
+            // Hide stay button
+            btnStay.Hide();
+
+            // Continue game
+            ContinueGame();
+        }
+
+        // Procedure if player wants to stay
+        private void btnStay_Click(object sender, EventArgs e)
+        {
+            // Hide third card and stay button
+            picPly3.Hide();
+            btnStay.Hide();
+
+            // Continue game
+            ContinueGame();
+        }
+
+        private void ContinueGame()
+        {
+            // Hide card hit reminder
+            lblHitPrompt.Hide();
+
+            // Set player and computer's total to display
+            lblPlyTotal.Text = "Player's Total: " + pScore;
+            lblComTotal.Text = "Computer's Total: " + cScore;
+
+            // Show scores
+            lblPlyTotal.Show();
+            lblComTotal.Show();
+
+            // Find who won. Either Bust, Tie, Blackjack, or who has greater
+            if (cScore > 21 && pScore > 21)
+            {
+                // Both Bust and Dealer wins
+                lblResults.Text = "You Both Busted! The Computer Wins!";
+
+                // Play OMG lose sound
+                //ooh.Play();
+
+                // Increase win count to who won
+                //computerWinCount++;
+            }
+            else if (pScore > 21)
+            {
+                // Set player to bust and computer to winner
+                lblResults.Text = "The Player Busted! The Computer Wins!";
+
+                //Play lose sound
+                //whaWha.Play();
+
+                // Increase win count to who won
+                //computerWinCount++;
+            }
+            else if (cScore > 21)
+            {
+                // Set computer to bust and player to winner
+                lblResults.Text = "The Computer Busted! The Player Wins!";
+
+                // Play win sound
+                //cheering.Play();
+
+                // Increase win count to who won
+                //playerWinCount++;
+            }
+            else if (pScore == cScore)
+            {
+                // Set a tie
+                lblResults.Text = "It's a Tie! No One Wins!";
+
+                // Play OMG lose sound
+                //ooh.Play();
+            }
+            else if (pScore == 21)
+            {
+                // Player has blackjack!
+                lblResults.Text = "The Player Got BlackJack! The Player Wins!";
+
+                // Play win sound
+                //cheering.Play();
+
+                // Increase win count to who won
+                //playerWinCount++;
+            }
+            else if (cScore == 21)
+            {
+                // Computer has blackjack!
+                lblResults.Text = "The Computer Got BlackJack! The Computer Wins!";
+
+                // Play lose sound
+                //whaWha.Play();
+
+                // Increase win count to who won
+                //computerWinCount++;
+            }
+            else if (pScore > cScore)
+            {
+                // Player won!
+                lblResults.Text = "The Player Got A Higher Number. The Player Wins!";
+
+                // Play win sound
+                //cheering.Play();
+
+                // Increase win count to who won
+                //playerWinCount++;
+            }
+            else
+            {
+                // Computer won!
+                lblResults.Text = "The Computer Got A Higher Number. The Computer Wins!";
+
+                // Play lose sound
+                //whaWha.Play();
+
+                // Increase win count to who won
+                //computerWinCount++;
+            }
+
+            // Show results text
+            lblResults.Show();
+
+            // Show new game button
+            btnNewGame.Show();
+        }
+
+        private void btnNewGame_Click(object sender, EventArgs e)
+        {
+            // Call new game procedure to restart
+            NewGame();
+        }
+
+        // Menu button for a new game
+        private void mniNewGame_Click(object sender, EventArgs e)
+        {
+            // Call new game procedure to restart
+            NewGame();
+        }
+
+        // To restart the game
+        private void NewGame()
+        {
+            // Hide new button, scores, and winner
+            btnNewGame.Hide();
+            lblComTotal.Hide();
+            lblPlyTotal.Hide();
+            lblResults.Hide();
+
+            // Clear player's and computer's card list
+            cCards.Clear();
+            pCards.Clear();
+
+            // Reset scores
+            cScore = 0;
+            pScore = 0;
+
+            // Allow for a third card again
+            alreadyGenerated = false;
+
+            // If there is less then 6 cards in the deck
+            if (gameCards.Count < 6)
+            {
+                // Tell the user a new deck is served
+                MessageBox.Show("You ran out of cards, a new deck is served");
+
+                // Clear gamecards
+                gameCards.Clear();
+
+                // Grab a new deck
+                RestartCards();
+            }
+
+            Game();
         }
     }
 }
